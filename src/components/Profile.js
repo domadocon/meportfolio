@@ -55,7 +55,6 @@ const Profile = () => {
                                 <p className='p_icon'>
                                     <a href="#">
                                         jju4768i@naver.com
-                                        {/* <img src="/img/email_icon.png" alt="email_icon" /> */}
                                     </a>
                                 </p>
                             </div>
