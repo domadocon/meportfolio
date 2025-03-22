@@ -1,0 +1,58 @@
+$main_Color: #27334B;
+$sub_Color: #fffffff8;
+$point: #DF5559;
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: $main_Color;
+  font-family: 'pretendard_r';
+  color: #ffffff;
+}
+
+.web{
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+
+  .section{
+    scroll-snap-align: start;
+    min-height: 100vh;
+    position: relative;
+  }
+}
+
+
+// scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #DF5559;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #27334B;
+  border-radius: 10px;
+}
+//

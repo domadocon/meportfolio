@@ -1,0 +1,155 @@
+@use '../styles.scss' as *;
+
+//header.css
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+//
+
+.profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  .title {
+    margin: 20px 0;
+
+    h2 {
+      font-family: 'pretendard_b';
+      font-size: 5rem;
+      margin-bottom: 20px;
+
+      span {
+        color: $point;
+      }
+    }
+  
+
+    p {
+      line-height: 150%;
+      font-size: 18px;
+    }
+  }
+
+  .aboutme {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .picture {
+      text-align: center;
+      align-content: center;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .human {
+      margin-left: 80px;
+      margin-top: 30px;
+
+      .detail {
+        display: flex;
+        font-size: 20px;
+        line-height: 200%;
+        margin-bottom: 20px;
+
+        .h_title {
+          padding-right: 3.5rem;
+        }
+      }
+
+      .qualifications,
+      .education {
+        font-size: 20px;
+        margin-bottom: 40px;
+
+        li {
+          &:first-child {
+            padding-bottom: 5px;
+          }
+
+          &:not(:first-child) {
+            font-size: 18px;
+            line-height: 150%;
+            margin-left: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//btn
+.btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .bubble {
+    width: 100px;
+    height: 160px;
+    background-color: $point;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+    margin-bottom: 60px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; 
+      left: 76%;
+      transform: translateX(-76%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid $point;
+    }
+  }
+
+  img{
+    position: absolute;
+    top: -34px;
+    right: 2px;
+    z-index: 2;
+    width: 94%;
+  }
+
+  .top_btn {
+    background-color: $point;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+//
