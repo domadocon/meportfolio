@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'pretendard_b';
+    src: url('/font/Pretendard-Bold.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'pretendard_m';
+    src: url('/font/Pretendard-Medium.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'pretendard_r';
+    src: url('/font/Pretendard-Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'soyo_b';
+    src: url('/font/SOYO_Maple_Bold.ttf') format('truetype');
+  }
+  
