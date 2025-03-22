@@ -67,7 +67,7 @@ const Skills = () => {
               percentage="70%"
             />
             <SkillsItem
-              iconSrc="img/lnDesign_icon.png"
+              iconSrc="img/lndesign_icon.png"
               altText="inDesign_icon"
               skillName="inDesign"
               percentage="50%"
