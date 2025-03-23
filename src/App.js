@@ -1,16 +1,23 @@
-import './scss/style.scss'
-import { Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import './scss/style.scss';
 import Intro from './pages/Intro';
 import Main from './pages/Main';
 
 const App = () => {
+  const [isMainPage, setIsMainPage] = useState(false);
+
+  const handleImageClick = () => {
+    setIsMainPage(true);
+  };
+
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Intro />} />
-        <Route path="/main" element={<Main />} />
-      </Routes>
-    </>
+    <div>
+      {!isMainPage ? (
+        <Intro handleImageClick={handleImageClick} />
+      ) : (
+        <Main />
+      )}
+    </div>
   );
 };
 

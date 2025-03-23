@@ -1,13 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const Intro = () => {
-  const navigate = useNavigate();
-
-  const handleImageClick = () => {
-    navigate('/main');
-  };
-
+const Intro = ({ handleImageClick }) => {
   return (
     <div className="intro_title">
       <h2>
