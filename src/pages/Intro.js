@@ -15,7 +15,7 @@ const Intro = ({ handleImageClick }) => {
       <h3>
         <span>박진현</span>
         <img
-          src="img/title.png"
+          src="./img/title.png"
           alt="title_img"
           onClick={handleImageClick}
         />

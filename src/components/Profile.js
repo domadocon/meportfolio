@@ -14,7 +14,7 @@ const Profile = () => {
     return (
         <div className='section'>
             <div className='header'>
-                <h1><a href="#"><img src="img/logo.png" alt="logo" /></a></h1>
+                <h1><a href="#"><img src="./img/logo.png" alt="logo" /></a></h1>
 
                 <ul>
                     <li><a href="#">PROFILE</a></li>
@@ -36,7 +36,7 @@ const Profile = () => {
 
                 <div className="aboutme">
                     <div className="picture">
-                        <img src="img/desktop_me.png" alt="me" />
+                        <img src="./img/desktop_me.png" alt="me" />
                     </div>
 
                     <div className="human">
@@ -85,7 +85,7 @@ const Profile = () => {
                     </div>
                 )}
 
-                <img src="img/top.png" alt="top_png" />
+                <img src="./img/top.png" alt="top_png" />
                 <button className="top_btn" onClick={toggleBubble}>
                     <RxHamburgerMenu color='#fff' size={28} />
                 </button>
