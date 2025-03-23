@@ -12,11 +12,13 @@ const App = () => {
 
   return (
     <div>
-      {!isMainPage ? (
+      {/* {!isMainPage ? (
         <Intro handleImageClick={handleImageClick} />
       ) : (
         <Main />
-      )}
+      )} */}
+      
+      <Main />
     </div>
   );
 };

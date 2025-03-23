@@ -5,7 +5,7 @@ const ProjectCard = ({ item }) => {
   return (
     <div className="card">
       <div className='card_i'>
-        <h4>{item.title}</h4>
+        <h2>{item.title}</h2>
         <a href="#">
           <img src={item.img} alt={item.title} />
         </a>
