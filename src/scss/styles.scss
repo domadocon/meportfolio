@@ -1,6 +1,8 @@
 $main_Color: #27334B;
 $sub_Color: #fffffff8;
 $point: #DF5559;
+$desktop: 1340px;
+$laptop: 1020px;
 
 
 @font-face {
@@ -21,8 +23,7 @@ $point: #DF5559;
   @font-face {
     font-family: 'soyo';
     src: url('/assets/fonts/soyo_Maple_Bold.ttf');
-  }
-    
+  } 
 
   * {
     padding: 0;
@@ -75,4 +76,3 @@ $point: #DF5559;
     background-color: #27334B;
     border-radius: 10px;
   }
-  

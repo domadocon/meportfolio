@@ -46,7 +46,7 @@
         transition: transform 0.5s;
 
         h4{
-          font-size: 3rem;
+          font-size: 2.5rem;
           text-align: center;
         }
 
@@ -57,8 +57,6 @@
         .skill{
           display: flex;
           justify-content: space-between;
-          font-size: 20px;
-          padding: 0 20px;
 
           p{
             align-self: center;
@@ -68,6 +66,7 @@
             font-family: 'pretendard_b';
             display: flex;
             align-items: center;
+            font-size: 16px;
 
             &:hover{
               color: $point;
@@ -82,4 +81,39 @@
       }
     }
   }
+}
+
+
+
+@media (max-width:$desktop) {
+  .projects{
+    .left{
+      h2{
+        padding: 0 2rem;
+      }
+    }
+    .right{
+      .scroll{
+        .card{
+          .card_i{
+            text-align: center;
+
+            img{
+              width: 90%;
+            }
+
+            .description{
+              text-align: start;
+            }
+          }
+
+          .skill{
+            font-size: 14px;
+            padding: 0 40px;
+          }
+        }
+      }
+    }
+  }
+
 }

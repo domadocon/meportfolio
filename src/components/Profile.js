@@ -62,15 +62,15 @@ const Profile = () => {
 
                         <ul className="qualifications">
                             <li>자격증</li>
-                            <li>&#45; Adobe Photoshop</li>
-                            <li>&#45; Adobe illustratar</li>
-                            <li>&#45; Adobe lnDesign</li>
-                            <li>&#45; ITQ 마스터<span> &#40;엑셀&#47;한글&#47;파워포인트&#41;</span></li>
+                            <li>&#176; Adobe Photoshop</li>
+                            <li>&#176; Adobe illustratar</li>
+                            <li>&#176; Adobe lnDesign</li>
+                            <li>&#176; ITQ 마스터<span> &#40;엑셀&#47;한글&#47;파워포인트&#41;</span></li>
                         </ul>
 
                         <ul className="education">
                             <li>교육활동</li>
-                            <li>&#45; AI&React 활용 스마트시티웨더 구축 - 리퍼블리셔 양성과정</li>
+                            <li>&#176; AI&React 활용 스마트시티웨더 구축 <br /> &#45; 리퍼블리셔 양성과정</li>
                         </ul>
                     </div>
                 </div>

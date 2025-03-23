@@ -1,3 +1,5 @@
+@use '../styles.scss' as *;
+
 footer {
   width: 100%;
   position: relative;
@@ -36,4 +38,16 @@ footer {
     bottom: 0;
     line-height: 150%;
     z-index: -1;
+  }
+
+
+  @media (max-width:$laptop) {
+    footer{
+      h2{
+        font-size: 4rem;
+      }
+      .bg_text{
+        font-size: 4rem;  
+      }
+    }
   }

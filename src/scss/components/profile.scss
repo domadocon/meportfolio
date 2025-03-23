@@ -23,21 +23,21 @@
   padding: 0 2rem;
 
   .title {
-    margin: 20px 0;
+    margin: 40px 0;
 
     h2 {
       font-family: 'pretendard_b';
       font-size: 5rem;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
 
       span {
         color: $point;
       }
     }
-  
+
 
     p {
-      line-height: 150%;
+      line-height: 160%;
       font-size: 18px;
     }
   }
@@ -56,28 +56,34 @@
     }
 
     .human {
-      margin-left: 80px;
-      margin-top: 30px;
+      margin-left: 60px;
 
       .detail {
         display: flex;
         font-size: 20px;
         line-height: 200%;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
 
         .h_title {
           padding-right: 3.5rem;
         }
       }
 
+      .qualifications{
+        margin-bottom: 40px;
+      }
+
       .qualifications,
       .education {
         font-size: 20px;
-        margin-bottom: 40px;
 
         li {
           &:first-child {
             padding-bottom: 5px;
+          }
+
+          br {
+            display: none;
           }
 
           &:not(:first-child) {
@@ -94,8 +100,8 @@
 //btn
 .btn {
   position: absolute;
-  bottom: 40px;
-  right: 40px;
+  bottom: 16px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -119,7 +125,7 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: -20px; 
+      bottom: -20px;
       left: 76%;
       transform: translateX(-76%);
       width: 0;
@@ -130,7 +136,7 @@
     }
   }
 
-  img{
+  img {
     position: absolute;
     top: -34px;
     right: 2px;
@@ -149,5 +155,44 @@
     align-items: center;
     z-index: 1;
     cursor: pointer;
+  }
+}
+
+
+@media (max-width:$desktop) {
+  .profile {
+    .aboutme {
+      .human {
+
+        .quelifications,
+        .education {
+          li {
+
+            br {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:$laptop) {
+  .profile {
+    .aboutme {
+      .human {
+        margin-left: 20px;
+
+        .detail {
+          line-height: 160%;
+          margin-bottom: 30px;
+        }
+
+        .qualifications{
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
 }
