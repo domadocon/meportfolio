@@ -13,7 +13,11 @@ const ProjectCard = ({ item }) => {
           <p>{item.skill}</p>
           <a href="#"> 사이트이동 <FiArrowUpRight size={38} /> </a>
         </div>
-        <p className="description">{item.description}</p>
+        <div className="description">
+          {item.description.map((desc, index) => (
+            <p key={index}>{desc}</p>
+          ))}
+        </div>
       </div>
     </div>
   );

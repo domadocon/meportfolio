@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { IoLogoGithub } from "react-icons/io";
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { IoPerson } from "react-icons/io5";
+import { PiCertificateFill } from "react-icons/pi";
+import { GiBookCover } from "react-icons/gi";
 
 const Profile = () => {
 
+    const [isActive, setIsActive] = useState(false);
     const [bubble, setBubble] = useState(false);
 
     const toggleBubble = () => {
@@ -11,20 +14,23 @@ const Profile = () => {
     };
 
 
+
     return (
         <div className='section'>
-            <div className='header'>
+            <div className="header">
                 <h1><a href="#"><img src="./img/logo.png" alt="logo" /></a></h1>
 
-                <ul>
-                    <li><a href="#">PROFILE</a></li>
-                    <li><a href="#">SKILLS</a></li>
-                    <li><a href="#">PROJECTS</a></li>
-                </ul>
+                <div>
+                    <ul>
+                        <li><a href="#profile">PROFILE</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#projects">PROJECTS</a></li>
+                    </ul>
+                </div>
             </div>
 
 
-            <div className="profile">
+            <div className="profile" id="profile">
                 <div className="title">
                     <h2><span>P</span>rofile</h2>
                     <p>
@@ -41,44 +47,56 @@ const Profile = () => {
 
                     <div className="human">
                         <div className="detail">
-                            <div className="h_title">
-                                <p>이름</p>
-                                <p>생년월일</p>
-                                <p>MBTI</p>
-                                <p>이메일</p>
+                            <div className="s_title">
+                                <h3><span><IoPerson /></span>ABOUT ME</h3>
                             </div>
+                            <div className="texts">
 
-                            <div className="h_text">
-                                <p>박진현</p>
-                                <p>1996.03.03.</p>
-                                <p>INTP</p>
-                                <p className='p_icon'>
-                                    <a href="#">
-                                        jju4768i@naver.com
-                                    </a>
-                                </p>
+                                <div className="left">
+                                    <p>이름</p>
+                                    <p>생년월일</p>
+                                    <p>MBTI</p>
+                                    <p>이메일</p>
+                                </div>
+
+                                <div className="right">
+                                    <p>박진현</p>
+                                    <p>1996.03.03.</p>
+                                    <p>INTP</p>
+                                    <p>jju4768i@naver.com</p>
+                                </div>
                             </div>
                         </div>
 
-                        <ul className="qualifications">
-                            <li>자격증</li>
-                            <li>&#176; Adobe Photoshop</li>
-                            <li>&#176; Adobe illustratar</li>
-                            <li>&#176; Adobe lnDesign</li>
-                            <li>&#176; ITQ 마스터<span> &#40;엑셀&#47;한글&#47;파워포인트&#41;</span></li>
-                        </ul>
+                        <div className="certificate">
+                            <div className="s_title">
+                                <h3><span><PiCertificateFill /></span>CERTIFICATE</h3>
+                            </div>
 
-                        <ul className="education">
-                            <li>교육활동</li>
-                            <li>&#176; AI&React 활용 스마트시티웨더 구축 <br /> &#45; 리퍼블리셔 양성과정</li>
-                        </ul>
+                            <div className="inventory">
+                                <p>Adobe Photosho</p>
+                                <p> Adobe illustratar</p>
+                                <p> Adobe lnDesign</p>
+                                <p> ITQ 마스터&#40;한글&#47;엑셀&#47;파포&#41;</p>
+                            </div>
+                        </div>
+
+                        <div className="education">
+                            <div className="s_title">
+                                <h3><span><GiBookCover /></span>EDUCATIONAL</h3>
+                            </div>
+
+                            <div className="inventory">
+                                <p> AI&React 활용 스마트시티웨더 구축 <br /> &#45; 리퍼블리셔 양성과정</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="btn">
                 {bubble && (
-                    <div className="bubble">
+                    <div className={`bubble ${bubble ? 'active' : ''}`}>
                         <a href="#"><IoLogoGithub color='#fff' size={33} /></a>
                         <a href="#">이력서</a>
                         <a href="#">자기소개서</a>
@@ -87,7 +105,11 @@ const Profile = () => {
 
                 <img src="./img/top.png" alt="top_png" />
                 <button className="top_btn" onClick={toggleBubble}>
-                    <RxHamburgerMenu color='#fff' size={28} />
+                    <div className={`hamburger ${isActive ? 'active' : ''}`}>
+                        <span className="line line1"></span>
+                        <span className="line line2"></span>
+                        <span className="line line3"></span>
+                    </div>
                 </button>
             </div>
         </div>

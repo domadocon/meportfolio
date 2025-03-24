@@ -3,6 +3,9 @@ $sub_Color: #fffffff8;
 $point: #DF5559;
 $desktop: 1340px;
 $laptop: 1020px;
+$tabletlarge: 870px;
+$tabletsmall: 740px;
+$mobile: 560px;
 
 
 @font-face {
@@ -50,6 +53,7 @@ $laptop: 1020px;
     height: 100vh;
     overflow: auto;
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
   
     .section {
       scroll-snap-align: start;
@@ -75,4 +79,12 @@ $laptop: 1020px;
   ::-webkit-scrollbar-track {
     background-color: #27334B;
     border-radius: 10px;
+  }
+
+
+
+  @media (max-width:$tabletsmall){
+    .web{
+      scroll-snap-type: none;
+    }
   }

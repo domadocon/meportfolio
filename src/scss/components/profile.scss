@@ -13,6 +13,14 @@
     display: flex;
     gap: 24px;
   }
+
+  .h_btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
 
 //
@@ -22,8 +30,9 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  .title {
-    margin: 40px 0;
+  &>.title {
+    margin-top: 20px;
+    margin-bottom: 30px;
 
     h2 {
       font-family: 'pretendard_b';
@@ -51,46 +60,73 @@
       align-content: center;
 
       img {
-        width: 80%;
+        width: 90%;
       }
     }
 
     .human {
-      margin-left: 60px;
+      margin-left: 100px;
 
-      .detail {
-        display: flex;
-        font-size: 20px;
-        line-height: 200%;
-        margin-bottom: 40px;
+      .s_title {
+        margin-bottom: 10px;
 
-        .h_title {
-          padding-right: 3.5rem;
+        h3 {
+          font-family: 'pretendard_b';
+          font-size: 22px;
+
+          span {
+            padding: 10px;
+          }
         }
       }
 
-      .qualifications{
-        margin-bottom: 40px;
+      .detail {
+        font-size: 20px;
+        line-height: 200%;
+        margin-bottom: 30px;
+
+        .texts {
+          width: 300px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin-left: 10px;
+          font-size: 18px;
+        }
       }
 
-      .qualifications,
+      .certificate {
+        margin-bottom: 30px;
+
+        .inventory {
+          font-size: 18px;
+        }
+      }
+
       .education {
-        font-size: 20px;
-
-        li {
-          &:first-child {
-            padding-bottom: 5px;
-          }
-
-          br {
-            display: none;
-          }
-
-          &:not(:first-child) {
+        .inventory {
+          p {
             font-size: 18px;
-            line-height: 150%;
-            margin-left: 18px;
+
+            br {
+              display: none;
+            }
           }
+        }
+      }
+
+
+      .certificate,
+      .education {
+
+        .title {
+          h3 {
+            font-size: 20px;
+          }
+        }
+
+        .inventory {
+          line-height: 180%;
+          padding-left: 10px;
         }
       }
     }
@@ -101,7 +137,7 @@
 .btn {
   position: absolute;
   bottom: 16px;
-  right: 20px;
+  right: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -147,29 +183,59 @@
   .top_btn {
     background-color: $point;
     border: none;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     cursor: pointer;
+
+    .hamburger {
+      position: relative;
+      width: 26px;
+      height: 21px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        border-radius: 5px;
+      }
+
+      &.active {
+        .line1 {
+          transform: rotate(45deg) translate(7px, 7px);
+        }
+        .line2 {
+          opacity: 0;
+        }
+        .line3 {
+          transform: rotate(-45deg) translate(6px, -6px);
+        }
+      }
+    }
   }
 }
+//
+
 
 
 @media (max-width:$desktop) {
   .profile {
     .aboutme {
       .human {
-
-        .quelifications,
         .education {
-          li {
-
-            br {
-              display: block;
+          .inventory {
+            p {
+              br {
+                display: block;
+              }
             }
           }
         }
@@ -182,17 +248,200 @@
   .profile {
     .aboutme {
       .human {
-        margin-left: 20px;
+        margin-left: 60px;
 
         .detail {
           line-height: 160%;
           margin-bottom: 30px;
-        }
 
-        .qualifications{
-          margin-bottom: 30px;
         }
       }
+
+      .certificate {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width:$tabletlarge) {
+  .profile {
+    &>.title {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .aboutme {
+      .human {
+        margin-left: 30px;
+
+        .s_title {
+          h3 {
+            font-size: 20px;
+          }
+        }
+
+        .detail {
+          line-height: 150%;
+        }
+
+        .certificate {
+          .inventory {
+            font-size: 16px;
+          }
+        }
+
+        .education {
+          .inventory {
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .detail {
+          .texts {
+            width: 260px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .btn {
+    bottom: 40px;
+  }
+}
+
+@media (max-width:$tabletsmall) {
+  .profile {
+    &>.title {
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .aboutme {
+      grid-template-columns: 1fr;
+
+      .picture {
+        img {
+          width: 65%;
+        }
+      }
+
+      .human {
+        margin: 0 auto;
+
+        .s_title {
+          margin-bottom: 10px;
+
+          h3 {
+            font-family: 'pretendard_b';
+            font-size: 20px;
+
+            &:first-child {
+              margin-top: 20px;
+            }
+          }
+
+        }
+
+        .detail {
+          text-align: center;
+        }
+
+        .certificate,
+        .education {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .btn {
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+  }
+}
+
+@media (max-width:$mobile) {
+  .header{
+    justify-content: center;
+    
+    h1{
+      a{
+        img{
+          width: 80%;
+        }
+      }
+    }
+
+    ul{
+      display: none;
+    }
+  }
+
+  .profile {
+    &>.title {
+      h2{
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+      }
+
+      p{
+        font-size: 16px;
+        text-align: justify;
+
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .btn{
+
+    .top_btn{
+      width: 40px;
+      height: 40px;
+
+      .hamburger{
+        width: 20px;
+        height: 16px;
+
+        &.active {
+          .line1 {
+            transform: rotate(45deg) translate(6px, 5px);
+          }
+          .line2 {
+            opacity: 0;
+          }
+          .line3 {
+            transform: rotate(-45deg) translate(4px, -4px);
+          }
+        }
+      }
+    }
+
+    .bubble{
+      width: 80px;
+      height: 140px;
+      font-size: 14px;
+      gap: 12px;
+      bottom: 80%;
+
+      &::after{
+        bottom: -16px;
+        
+      }
+    }
+
+    img{
+      width: 90%;
+      top: -24px;
     }
   }
 }

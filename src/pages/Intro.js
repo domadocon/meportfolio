@@ -21,6 +21,11 @@ const Intro = ({ handleImageClick }) => {
         />
         <span>포토폴리오</span>
       </h3>
+
+      <div className="click-indicator">
+        <span className="arrow">&#8595;</span>
+        <span>Click</span>
+      </div>
     </div>
   );
 };

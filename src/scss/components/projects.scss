@@ -57,6 +57,7 @@
         .skill{
           display: flex;
           justify-content: space-between;
+          padding: 0 20px;
 
           p{
             align-self: center;
@@ -77,6 +78,11 @@
         
         .description{
           padding: 20px;
+          margin-top: 10px;
+
+          p{
+            line-height: 200%;
+          }
         }
       }
     }

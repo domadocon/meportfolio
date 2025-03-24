@@ -1,77 +1,77 @@
 .intro_title {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    align-content: center;
-    font-family: 'soyo';
-    font-size: 3rem;
-    font-weight: 100;
-  
-    h3 {
-      font-size: 6rem;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  align-content: center;
+  font-family: 'soyo';
+  font-size: 3rem;
+  font-weight: 100;
 
-      img{
-        cursor: pointer;
-      }
-    }
-  
-    .bounceball {
-      position: relative;
-      display: inline-block;
-  
-      &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 15px;
-        height: 15px;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        margin-top: -5px;
-        border-radius: 50%;
-        background-color: #df5559;
-        transform-origin: 50%;
-        animation: bounce 450ms alternate infinite ease;
-      }
-  
-      &:nth-child(1):before {
-        animation-delay: 0s;
-      }
-  
-      &:nth-child(2):before {
-        animation-delay: 0.2s;
-      }
-  
-      &:nth-child(3):before {
-        animation-delay: 0.3s;
-      }
-  
-      &:nth-child(4):before {
-        animation-delay: 0.3s;
-      }
-  
-      &:nth-child(5):before {
-        animation-delay: 0.4s;
-      }
-    }
-  
-    @keyframes bounce {
-      0% {
-        top: -5px;
-        height: 10px;
-        border-radius: 60px 60px 20px 20px;
-      }
-  
-      35% {
-        height: 15px;
-        border-radius: 100%;
-      }
-  
-      100% {
-        top: -20px;
-      }
+  h3 {
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+      cursor: pointer;
     }
   }
+
+  .bounceball {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: -5px;
+      border-radius: 50%;
+      background-color: #df5559;
+      transform-origin: 50%;
+      animation: bounce 450ms alternate infinite ease;
+    }
+
+    &:nth-child(1):before {
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2):before {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3):before {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(4):before {
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(5):before {
+      animation-delay: 0.4s;
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      top: -5px;
+      height: 10px;
+      border-radius: 60px 60px 20px 20px;
+    }
+
+    35% {
+      height: 15px;
+      border-radius: 100%;
+    }
+
+    100% {
+      top: -20px;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import SkillsItem from './SkillsItem';
 
 const Skills = () => {
   return (
-    <div className='skills section'>
+    <div className='skills section' id="skills">
       <h2><span>S</span>kills</h2>
 
       <div className="skills_icon">
