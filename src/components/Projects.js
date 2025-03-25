@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 
-const projects = [
+const data = [
   {
     id: 1,
     title: 'Weather',
@@ -34,7 +34,7 @@ const projects = [
       '• 화면 크기에 따라 자동으로 레이아웃이 조정, 모바일 화면에서 햄버거 메뉴',
       '• 페이지 스크롤에 따라 헤더가 고정되어 네비게이션이 항상 노출',
       '• 슬라이드 및 배경 애니메이션을 통해 다이나믹한 사용자 경험제공',
-      '• 마우스를 올리면 애니메이션 효과과 및 추가 정보가 나타나도록 구현'
+      '• 마우스를 올리면 애니메이션 효과 및 추가 정보가 나타나도록 구현'
     ],
     img: './img/lunabrew.png',
     skill: 'HTML / CSS / JavaScript',
@@ -56,7 +56,7 @@ const Projects = () => {
       return;
     }
 
-    if (currentIndex === projects.length - 1 && e.deltaY > 0) {
+    if (currentIndex === data.length - 1 && e.deltaY > 0) {
       return;
     }
 
@@ -65,7 +65,7 @@ const Projects = () => {
     if (scrolling.current) return;
 
     let nextIndex;
-    if (e.deltaY > 0 && currentIndex < projects.length - 1) {
+    if (e.deltaY > 0 && currentIndex < data.length - 1) {
       nextIndex = currentIndex + 1;
     } else if (e.deltaY < 0 && currentIndex > 0) {
       nextIndex = currentIndex - 1;
@@ -102,10 +102,11 @@ const Projects = () => {
 
       <div className="right">
         <div className="scroll" ref={scrollRef}>
-          {projects.map((item) => (
+          {data.map((item) => (
             <ProjectCard key={item.id} item={item} />
           ))}
         </div>
+        <div className='scroll_mouse'>scroll</div>
       </div>
     </div>
   );

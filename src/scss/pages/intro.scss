@@ -1,3 +1,5 @@
+@use '../styles.scss' as *;
+
 .intro_title {
   width: 100vw;
   height: 100vh;
@@ -15,6 +17,9 @@
 
     img {
       cursor: pointer;
+      &:hover{
+        transform: rotate(5deg);
+      }
     }
   }
 
@@ -74,4 +79,17 @@
       top: -20px;
     }
   }
+
+//   .click-indicator{
+
+//     .arrow{
+//       svg{
+//         transform: rotate(-10deg);
+//       }
+//     }
+
+//     .click_text{
+//       font-size: 22px;
+//     }
+//   }
 }

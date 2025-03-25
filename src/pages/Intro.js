@@ -1,4 +1,5 @@
 import React from 'react';
+// import { FaArrowPointer } from "react-icons/fa6";
 
 const Intro = ({ handleImageClick }) => {
   return (
@@ -15,17 +16,17 @@ const Intro = ({ handleImageClick }) => {
       <h3>
         <span>박진현</span>
         <img
-          src="./img/title.png"
+          src="./img/title.svg"
           alt="title_img"
           onClick={handleImageClick}
         />
         <span>포토폴리오</span>
       </h3>
-
+{/* 
       <div className="click-indicator">
-        <span className="arrow">&#8595;</span>
-        <span>Click</span>
-      </div>
+        <span className="arrow"><FaArrowPointer size={38} /></span>
+        <span className='click_text'>Click</span>
+      </div> */}
     </div>
   );
 };

@@ -10,6 +10,7 @@ const Profile = () => {
     const [bubble, setBubble] = useState(false);
 
     const toggleBubble = () => {
+        setIsActive(!isActive);
         setBubble(!bubble);
     };
 

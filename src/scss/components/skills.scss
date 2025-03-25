@@ -1,56 +1,155 @@
 @use '../styles.scss' as *;
 
-.skills{
+.skills {
   max-width: 1200px;
   margin: auto;
   padding: 100px 1rem;
 
-  h2{
+  h2 {
     font-family: 'pretendard_b';
     font-size: 5rem;
-    margin: 40px 0;
+    margin: 60px 0;
 
     span {
       color: $point;
     }
   }
 
-  .skills_icon{
-    width: 100%;
+  .skills_icon {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-    
-    .icons{
-      display: flex;
-      justify-content: center;
-      gap: 20px; 
-      flex-wrap: wrap;
+    justify-items: center;
 
-      .icon{
-        width: 50%;
-        display: flex;
-  
-        img{
-          width: 60px;
-        }
-      }
+    h3 {
+      font-size: 2.5rem;
+      padding-bottom: 32px;
+      text-align: center;
     }
 
     .coding,
     .design,
-    .itq{
-      justify-self: center;
-
-      h3{
-        font-size: 2.5rem;
-        padding-bottom: 30px;
+    .itq {
+      .icon {
+        display: flex;
+        gap: 18px;
+        padding-bottom: 10px;
       }
 
-      .text{
-        text-align: start;
+
+      .text {
         align-content: center;
-        padding-left: 10px;
+        width: 100px;
+      }
+    }
+  }
+}
+
+
+@media (max-width:$tabletsmall) {
+
+  .skills {
+    padding: 100px 1rem;
+
+    h2 {
+      text-align: center;
+    }
+
+    .skills_icon {
+      grid-template-columns: repeat(1, 1fr);
+
+      h3 {
+        text-align: start;
+      }
+
+      .coding {
+        .icons {
+          .icons_i {
+
+            .coding_top,
+            .coding_btm {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+        }
+      }
+
+      .design,
+      .itq {
+        .icons {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .coding,
+      .design,
+      .itq {
+        margin-bottom: 40px;
+
+        .icon {
+          img {
+            width: 55px;
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+
+@media (max-width:$mobile) {
+  .skills{
+    h2{
+      font-size: 3.5rem;
+      margin: 20px 0;
+    }
+    .skills_icon{
+      h3{
+        font-size: 2rem;
+      }
+      
+      .coding,
+      .design,
+      .itq{
+        .icon{
+          gap: 4px;
+        }
+
+        .text{
+          font-size: 14px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:470px) {
+  .skills{
+    h2{
+      margin: 40px 0;
+    }
+    
+    .skills_icon{
+      h3{
+        text-align: center;
+        padding-bottom: 16px;
+      }
+
+      .coding,
+      .design,
+      .itq{
+        .icon{
+          img{
+            width: 80px;
+          }
+        }
+        .text{
+          display: none;
+        }
       }
     }
   }

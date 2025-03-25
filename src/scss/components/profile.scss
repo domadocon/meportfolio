@@ -320,10 +320,26 @@
     &>.title {
       margin-top: 20px;
       margin-bottom: 40px;
+      text-align: center;
+      
+      h2{
+        margin-bottom: 20px;
+      }
     }
 
     .aboutme {
       grid-template-columns: 1fr;
+
+      .human{
+        .detail{
+          .texts{
+            grid-template-columns: 1fr;
+            .left{
+              display: none;
+            }
+          }
+        }
+      }
 
       .picture {
         img {
