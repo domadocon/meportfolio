@@ -60,7 +60,7 @@
       align-content: center;
 
       img {
-        width: 90%;
+        width: 88%;
       }
     }
 
@@ -69,6 +69,7 @@
 
       .s_title {
         margin-bottom: 10px;
+        
 
         h3 {
           font-family: 'pretendard_b';
@@ -91,6 +92,14 @@
           grid-template-columns: repeat(2, 1fr);
           margin-left: 10px;
           font-size: 18px;
+
+          .right{
+            p:last-child {
+              &:hover {
+                color: $point; 
+              }
+            }
+          }
         }
       }
 
@@ -135,9 +144,10 @@
 
 //btn
 .btn {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   bottom: 16px;
-  right: 10px;
+  right: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -320,7 +330,7 @@
     &>.title {
       margin-top: 20px;
       margin-bottom: 40px;
-      text-align: center;
+      // text-align: center;
       
       h2{
         margin-bottom: 20px;
@@ -377,8 +387,6 @@
   }
 
   .btn {
-    position: fixed;
-    z-index: 1;
     right: 20px;
   }
 }
@@ -401,6 +409,8 @@
   }
 
   .profile {
+    margin-bottom: 120px;
+    
     &>.title {
       h2{
         font-size: 3.5rem;
@@ -419,6 +429,7 @@
   }
 
   .btn{
+    bottom: 74px;
 
     .top_btn{
       width: 40px;

@@ -52,3 +52,35 @@ footer {
       }
     }
   }
+
+
+  @media (max-width:$tabletsmall) {
+    footer{
+      h2{
+        font-size: 3rem;
+      }
+      
+      .bg_text{
+        font-size: 3rem;  
+      }
+    }
+  }
+
+
+  @media (max-width:$mobile) {
+    footer{
+      h2{
+        font-size: 2rem;
+      }
+      
+      .bg_text{
+        bottom: 51%;
+        right: 48%;
+        font-size: 1.8rem; 
+      }
+    }
+
+    .info_text{
+      font-size: 12px;
+    }
+  }

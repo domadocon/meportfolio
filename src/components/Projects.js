@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import ProjectCard from './ProjectCard';
 
 const data = [
   {
     id: 1,
+    bigtitle: 'Project',
     title: 'Weather',
     description: [
       '• React 및 React Router를 활용하여 컴포넌트 기반 SPA 제작',
@@ -12,7 +13,7 @@ const data = [
       '• 조건부 렌더링을 사용해 동적 및 애니메이션(낮/밤 배경, 구름, 별) 생성',
     ],
     img: './img/weather.png',
-    skill: 'JSX / CSS / React / ReactRouter / TanstckQuey',
+    skill: '#JSX #CSS #React #ReactRouter #TanstckQuey',
   },
   {
     id: 2,
@@ -25,11 +26,11 @@ const data = [
 
     ],
     img: './img/todolist.png',
-    skill: 'JSX / CSS / React',
+    skill: '#JSX #CSS #React',
   },
   {
     id: 3,
-    title: 'Lunabrew Clone Coding',
+    title: 'Lunabrew CloneCoding',
     description: [
       '• 화면 크기에 따라 자동으로 레이아웃이 조정, 모바일 화면에서 햄버거 메뉴',
       '• 페이지 스크롤에 따라 헤더가 고정되어 네비게이션이 항상 노출',
@@ -37,28 +38,27 @@ const data = [
       '• 마우스를 올리면 애니메이션 효과 및 추가 정보가 나타나도록 구현'
     ],
     img: './img/lunabrew.png',
-    skill: 'HTML / CSS / JavaScript',
+    skill: '#HTML #CSS #JavaScript',
   },
 ];
 
-const Projects = () => {
 
+const Projects = () => {
   const scrollRef = useRef();
   const scrolling = useRef(false);
 
-  const handleWheel = (e) => {
+  const handleWheel = useCallback((e) => {
+    
+    if (window.innerWidth <= 740) return;
+
+
     const container = scrollRef.current;
     const scrollWidth = container.clientWidth;
     const currentScroll = container.scrollLeft;
     const currentIndex = Math.round(currentScroll / scrollWidth);
 
-    if (currentIndex === 0 && e.deltaY < 0) {
-      return;
-    }
-
-    if (currentIndex === data.length - 1 && e.deltaY > 0) {
-      return;
-    }
+    if (currentIndex === 0 && e.deltaY < 0) return;
+    if (currentIndex === data.length - 1 && e.deltaY > 0) return;
 
     e.preventDefault();
 
@@ -75,7 +75,6 @@ const Projects = () => {
 
     scrolling.current = true;
 
-    //부드러운 스크롤
     window.requestAnimationFrame(() => {
       container.scrollTo({
         left: scrollWidth * nextIndex,
@@ -86,13 +85,13 @@ const Projects = () => {
     setTimeout(() => {
       scrolling.current = false;
     }, 800);
-  };
+  }, []);
 
   useEffect(() => {
     const el = scrollRef.current;
     el.addEventListener('wheel', handleWheel, { passive: false });
     return () => el.removeEventListener('wheel', handleWheel);
-  }, []);
+  }, [handleWheel]);
 
   return (
     <div className="projects section" id="projects">
@@ -106,7 +105,7 @@ const Projects = () => {
             <ProjectCard key={item.id} item={item} />
           ))}
         </div>
-        <div className='scroll_mouse'>scroll</div>
+        <div className="scroll_mouse">scroll</div>
       </div>
     </div>
   );

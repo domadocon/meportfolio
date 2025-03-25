@@ -3,7 +3,7 @@
 .skills {
   max-width: 1200px;
   margin: auto;
-  padding: 100px 1rem;
+  padding: 40px 1rem;
 
   h2 {
     font-family: 'pretendard_b';
@@ -48,10 +48,10 @@
 @media (max-width:$tabletsmall) {
 
   .skills {
-    padding: 100px 1rem;
+    padding: 20px 1rem;
 
     h2 {
-      text-align: center;
+      // text-align: center;
     }
 
     .skills_icon {
@@ -135,7 +135,7 @@
     
     .skills_icon{
       h3{
-        text-align: center;
+        // text-align: center;
         padding-bottom: 16px;
       }
 

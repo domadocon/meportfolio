@@ -4,8 +4,17 @@ import { FiArrowUpRight } from "react-icons/fi";
 const ProjectCard = ({ item }) => {
   return (
     <div className="card">
+        <h2>
+          {item.bigtitle && (
+            <>
+              <span style={{color: '#DF5559'}}>P</span>
+              {item.bigtitle.slice(1)}
+            </>
+          )}
+        </h2>
+        
       <div className='card_i'>
-        <h2>{item.title}</h2>
+        <h3>{item.title}</h3>
         <a href="#">
           <img src={item.img} alt={item.title} />
         </a>

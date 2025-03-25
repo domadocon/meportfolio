@@ -64,10 +64,11 @@ const Profile = () => {
                                     <p>박진현</p>
                                     <p>1996.03.03.</p>
                                     <p>INTP</p>
-                                    <p>jju4768i@naver.com</p>
+                                    <p><a href="mailto:jju4768i@naver.com">jju4768i@naver.com</a></p>
                                 </div>
                             </div>
                         </div>
+
 
                         <div className="certificate">
                             <div className="s_title">

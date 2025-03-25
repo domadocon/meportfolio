@@ -6,18 +6,22 @@
   text-align: center;
   align-content: center;
   font-family: 'soyo';
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 100;
 
   h3 {
-    font-size: 6rem;
+    font-size: 5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
 
     img {
+      width: 100px;
+      height: 120px;
       cursor: pointer;
-      &:hover{
+
+      &:hover {
         transform: rotate(5deg);
       }
     }
@@ -79,17 +83,89 @@
       top: -20px;
     }
   }
+}
 
-//   .click-indicator{
 
-//     .arrow{
-//       svg{
-//         transform: rotate(-10deg);
-//       }
-//     }
+@media (max-width:$tabletlarge) {
 
-//     .click_text{
-//       font-size: 22px;
-//     }
-//   }
+  .intro_title {
+    font-size: 2rem;
+
+    .bounceball {
+      &:before {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    h3 {
+      font-size: 3.5rem;
+
+      img{
+        width: 80px;
+        height: 100px;
+      }
+    }
+  }
+
+
+
+  @keyframes bounce {
+    0% {
+      top: -10px;
+      border-radius: 60px 60px 20px 20px;
+    }
+
+    35% {
+      height: 13px;
+      border-radius: 100%;
+    }
+
+    100% {
+      top: -20px;
+    }
+  }
+}
+
+
+@media (max-width:$mobile) {
+
+  .intro_title {
+    font-size: 1rem;
+
+    .bounceball {
+      &:before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-top: 0;
+
+      img{
+        width: 40px;
+        height: 60px;
+      }
+    }
+  }
+
+
+
+  @keyframes bounce {
+    0% {
+      top: -10px;
+      border-radius: 60px 60px 20px 20px;
+    }
+
+    35% {
+      height: 8px;
+      border-radius: 100%;
+    }
+
+    100% {
+      top: -20px;
+    }
+  }
 }

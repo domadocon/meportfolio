@@ -42,10 +42,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ffffffd2;
+        background-color: #ffffffee;
         transition: transform 0.5s;
 
-        h2 {
+        h2{
+          display: none;
+        }
+
+        h3 {
           font-size: 2.5rem;
           text-align: center;
         }
@@ -120,7 +124,6 @@
           }
 
           .skill {
-            font-size: 14px;
             padding: 0 40px;
           }
         }
@@ -133,23 +136,48 @@
   .projects {
     flex-direction: column;
     height: auto;
-
-    .left {
+    
+    .left{
       display: none;
     }
-
+    
     .right {
+      position: relative;
+
       .scroll {
         .card {
-          background-color: #ffffffd2;
+          background-color: #ffffffee;
+          display: flex;
+          flex-direction: column;
+
+          .card_i{
+            h2{
+              display: block;
+              font-size: 4rem;
+            }
+          }
+          
+          h2{
+            display: block;
+            font-family: 'pretendard_b';
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            
+            span{
+              color: $point;
+            }
+          }
+
+          img{
+            padding-top: 10px;
+          }
         }
       }
 
       .scroll_mouse {
         position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 0;
+        right: 2%;
         font-size: 18px;
         color: $point;
         display: flex;
@@ -173,6 +201,105 @@
 
           100% {
             transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $tabletsmall) {
+  .projects {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+
+    .left{
+      display: block;
+
+      h2{
+        font-size: 3.5rem;
+        margin-bottom: 40px;
+        padding: 0;
+      }
+    }
+
+    .right {
+      max-width: 1000px;
+      height: 100%;
+      margin: auto;
+
+      .scroll {
+        flex-direction: column;
+
+        .card {
+          flex: 0 0 auto;
+          height: auto; 
+          margin-bottom: 40px;
+          background-color: #ffffffee;
+          border-radius: 20px;
+
+          .card_i{
+            h3{
+              padding-top: 24px;
+              padding-bottom: 10px;
+              font-size: 2rem;
+            }
+          }
+          
+          h2 {
+            display: none;
+
+            span {
+              color: $point;
+            }
+          }
+
+          img {
+            padding-top: 10px;
+          }
+
+          .skill{
+            justify-content: start;
+            
+            p{
+              font-size: 14px;
+            }
+
+            a{
+              display: none;
+            }
+          }
+
+          .description{
+            p{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .scroll_mouse {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $mobile){
+  .projects{
+    .right{
+      .scroll{
+        .card{
+          .skill{
+            justify-content: center;
+          }
+          .card_i{
+            h3{
+              font-size: 1.3rem;
+            }
           }
         }
       }
