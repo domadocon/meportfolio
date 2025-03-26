@@ -49,7 +49,7 @@ const Projects = () => {
 
   const handleWheel = useCallback((e) => {
     
-    if (window.innerWidth <= 740) return;
+    if (window.innerWidth <= 640) return;
 
 
     const container = scrollRef.current;
@@ -105,7 +105,7 @@ const Projects = () => {
             <ProjectCard key={item.id} item={item} />
           ))}
         </div>
-        <div className="scroll_mouse">scroll</div>
+        <div className="scroll_mouse">Scroll <br/> wheel </div>
       </div>
     </div>
   );

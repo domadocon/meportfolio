@@ -3,12 +3,12 @@
 .skills {
   max-width: 1200px;
   margin: auto;
-  padding: 40px 1rem;
+  padding: 50px 1rem;
 
   h2 {
     font-family: 'pretendard_b';
     font-size: 5rem;
-    margin: 60px 0;
+    margin: 40px 0;
 
     span {
       color: $point;
@@ -48,12 +48,12 @@
 @media (max-width:$tabletsmall) {
 
   .skills {
-    padding: 20px 1rem;
+    padding: 80px 1rem;
 
-    h2 {
-      // text-align: center;
+    h2{
+      font-size: 4rem;
     }
-
+    
     .skills_icon {
       grid-template-columns: repeat(1, 1fr);
 
@@ -130,7 +130,7 @@
 @media screen and (max-width:470px) {
   .skills{
     h2{
-      margin: 40px 0;
+      margin: 70px 0;
     }
     
     .skills_icon{
@@ -144,7 +144,7 @@
       .itq{
         .icon{
           img{
-            width: 80px;
+            width: 76px;
           }
         }
         .text{

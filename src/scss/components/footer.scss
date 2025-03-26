@@ -2,85 +2,86 @@
 
 footer {
   width: 100%;
-  position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-family: 'soyo';
+  position: relative;
+
+  h2 {
+    position: absolute;
+    font-size: 5rem;
+    top: 35%;
+
+    span {
+      padding-left: 14px;
+    }
+  }
+}
+
+
+.info {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  color: #444;
+  font-family: 'pretendard_m';
+  font-size: 1rem;
   text-align: center;
   align-content: center;
-  padding-bottom: 20px;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  line-height: 150%;
 
-  .bg_text{
-    position: absolute;
-    bottom: 51%;
-    right: 47%;
-    font-size: 5rem;
-    color: rgba(255, 255, 255, 0.096);
-    z-index: -1;
-  }
-  
-  h2{
-      font-size: 5rem;
-    }
-  }
-
-  .info_text{
-    width: 100%;
-    height: 100px;
-    background-color: #fff;
-    color: #444444;
-    font-family: 'pretendard_m';
-    font-size: 1rem;
+  .contact {
+    position: relative;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    line-height: 150%;
-    z-index: -1;
-  }
+    gap: 8px;
 
-
-  @media (max-width:$laptop) {
-    footer{
-      h2{
-        font-size: 4rem;
-      }
-      
-      .bg_text{
-        font-size: 4rem;  
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 23px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1%;
+      height: 1px;
+      background-color: #444;
     }
   }
+}
 
 
-  @media (max-width:$tabletsmall) {
-    footer{
-      h2{
-        font-size: 3rem;
-      }
-      
-      .bg_text{
-        font-size: 3rem;  
-      }
+@media (max-width:$laptop) {
+  footer {
+    h2 {
+      font-size: 4rem;
     }
   }
+}
 
 
-  @media (max-width:$mobile) {
-    footer{
-      h2{
-        font-size: 2rem;
+@media (max-width:$tabletsmall) {
+  footer {
+    h2 {
+      font-size: 3rem;
+
+
+      span {
+        img {
+          width: 12%;
+        }
       }
-      
-      .bg_text{
-        bottom: 51%;
-        right: 48%;
-        font-size: 1.8rem; 
-      }
-    }
 
-    .info_text{
-      font-size: 12px;
     }
   }
+}
+
+
+@media (max-width:$mobile) {
+
+  .info_text {
+    font-size: 12px;
+  }
+}

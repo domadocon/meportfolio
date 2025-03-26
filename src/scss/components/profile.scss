@@ -28,11 +28,11 @@
 .profile {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
   &>.title {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     h2 {
       font-family: 'pretendard_b';
@@ -56,47 +56,59 @@
     grid-template-columns: repeat(2, 1fr);
 
     .picture {
-      text-align: center;
-      align-content: center;
-
       img {
         width: 88%;
       }
     }
 
     .human {
-      margin-left: 100px;
+      margin-left: 60px;
 
       .s_title {
-        margin-bottom: 10px;
-        
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
 
         h3 {
+          width: 100%;
+          display: flex;
+          align-items: center;
           font-family: 'pretendard_b';
           font-size: 22px;
 
           span {
-            padding: 10px;
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+          }
+
+          &::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #fff;
+            margin-left: 10px;
           }
         }
       }
 
       .detail {
         font-size: 20px;
-        line-height: 200%;
+        line-height: 180%;
         margin-bottom: 30px;
 
         .texts {
-          width: 300px;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          margin-left: 10px;
+          padding-left: 20px;
           font-size: 18px;
 
-          .right{
-            p:last-child {
+          p {
+            &:last-child {
               &:hover {
-                color: $point; 
+                color: $point;
               }
             }
           }
@@ -104,10 +116,12 @@
       }
 
       .certificate {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
 
         .inventory {
           font-size: 18px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -135,7 +149,7 @@
 
         .inventory {
           line-height: 180%;
-          padding-left: 10px;
+          padding-left: 20px;
         }
       }
     }
@@ -222,9 +236,11 @@
         .line1 {
           transform: rotate(45deg) translate(7px, 7px);
         }
+
         .line2 {
           opacity: 0;
         }
+
         .line3 {
           transform: rotate(-45deg) translate(6px, -6px);
         }
@@ -232,12 +248,17 @@
     }
   }
 }
+
 //
 
 
 
 @media (max-width:$desktop) {
   .profile {
+    &>.title {
+      margin-bottom: 50px;
+    }
+
     .aboutme {
       .human {
         .education {
@@ -256,14 +277,16 @@
 
 @media (max-width:$laptop) {
   .profile {
+    &>.title {
+      margin-bottom: 60px;
+    }
+
     .aboutme {
       .human {
-        margin-left: 60px;
+        margin-left: 40px;
 
         .detail {
-          line-height: 160%;
-          margin-bottom: 30px;
-
+          margin-bottom: 40px;
         }
       }
 
@@ -276,23 +299,15 @@
 
 @media (max-width:$tabletlarge) {
   .profile {
-    &>.title {
-      margin-top: 20px;
-      margin-bottom: 40px;
-    }
 
     .aboutme {
       .human {
-        margin-left: 30px;
+        margin-left: 10px;
 
         .s_title {
           h3 {
             font-size: 20px;
           }
-        }
-
-        .detail {
-          line-height: 150%;
         }
 
         .certificate {
@@ -311,7 +326,6 @@
 
         .detail {
           .texts {
-            width: 260px;
             font-size: 16px;
           }
         }
@@ -326,149 +340,120 @@
 }
 
 @media (max-width:$tabletsmall) {
+  .header {
+    justify-content: center;
+
+    h1 {
+      a {
+        img {
+          width: 80%;
+        }
+      }
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
   .profile {
     &>.title {
-      margin-top: 20px;
       margin-bottom: 40px;
-      // text-align: center;
-      
-      h2{
-        margin-bottom: 20px;
+
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 26px;
+      }
+
+      p {
+        font-size: 16px;
+        text-align: justify;
+
+        br {
+          display: none;
+        }
       }
     }
 
     .aboutme {
       grid-template-columns: 1fr;
 
-      .human{
-        .detail{
-          .texts{
-            grid-template-columns: 1fr;
-            .left{
-              display: none;
-            }
-          }
-        }
-      }
-
       .picture {
+        text-align: center;
+        margin-bottom: 40px;
+
         img {
-          width: 65%;
+          width: 80%;
         }
       }
 
       .human {
-        margin: 0 auto;
-
-        .s_title {
-          margin-bottom: 10px;
-
-          h3 {
-            font-family: 'pretendard_b';
-            font-size: 20px;
-
-            &:first-child {
-              margin-top: 20px;
-            }
-          }
-
-        }
-
         .detail {
-          text-align: center;
+          .texts {
+            width: 100%;
+            padding-left: 0px;
+          }
         }
 
         .certificate,
         .education {
-          text-align: center;
-        }
-      }
-    }
-  }
+          .inventory {
+            padding-left: 0px;
 
-  .btn {
-    right: 20px;
-  }
-}
-
-@media (max-width:$mobile) {
-  .header{
-    justify-content: center;
-    
-    h1{
-      a{
-        img{
-          width: 80%;
-        }
-      }
-    }
-
-    ul{
-      display: none;
-    }
-  }
-
-  .profile {
-    margin-bottom: 120px;
-    
-    &>.title {
-      h2{
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-      }
-
-      p{
-        font-size: 16px;
-        text-align: justify;
-
-        br{
-          display: none;
-        }
-      }
-    }
-  }
-
-  .btn{
-    bottom: 74px;
-
-    .top_btn{
-      width: 40px;
-      height: 40px;
-
-      .hamburger{
-        width: 20px;
-        height: 16px;
-
-        &.active {
-          .line1 {
-            transform: rotate(45deg) translate(6px, 5px);
-          }
-          .line2 {
-            opacity: 0;
-          }
-          .line3 {
-            transform: rotate(-45deg) translate(4px, -4px);
+            p {
+              br {
+                display: none;
+              }
+            }
           }
         }
       }
     }
 
-    .bubble{
-      width: 80px;
-      height: 140px;
-      font-size: 14px;
-      gap: 12px;
-      bottom: 80%;
+    .btn {
+      bottom: 74px;
 
-      &::after{
-        bottom: -16px;
-        
+      .top_btn {
+        width: 40px;
+        height: 40px;
+
+        .hamburger {
+          width: 20px;
+          height: 16px;
+
+          &.active {
+            .line1 {
+              transform: rotate(45deg) translate(6px, 5px);
+            }
+
+            .line2 {
+              opacity: 0;
+            }
+
+            .line3 {
+              transform: rotate(-45deg) translate(4px, -4px);
+            }
+          }
+        }
       }
-    }
 
-    img{
-      width: 90%;
-      top: -24px;
+      .bubble {
+        width: 80px;
+        height: 140px;
+        font-size: 14px;
+        gap: 12px;
+        bottom: 80%;
+
+        &::after {
+          bottom: -16px;
+
+        }
+      }
+
+      img {
+        width: 90%;
+        top: -24px;
+      }
     }
   }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { IoLogoGithub } from "react-icons/io";
 import { IoPerson } from "react-icons/io5";
 import { PiCertificateFill } from "react-icons/pi";
 import { GiBookCover } from "react-icons/gi";
@@ -43,7 +42,7 @@ const Profile = () => {
 
                 <div className="aboutme">
                     <div className="picture">
-                        <img src="./img/desktop_me.png" alt="me" />
+                        <img src="./img/me.png" alt="me" />
                     </div>
 
                     <div className="human">
@@ -52,20 +51,14 @@ const Profile = () => {
                                 <h3><span><IoPerson /></span>ABOUT ME</h3>
                             </div>
                             <div className="texts">
-
-                                <div className="left">
-                                    <p>이름</p>
-                                    <p>생년월일</p>
-                                    <p>MBTI</p>
-                                    <p>이메일</p>
-                                </div>
-
-                                <div className="right">
-                                    <p>박진현</p>
-                                    <p>1996.03.03.</p>
-                                    <p>INTP</p>
-                                    <p><a href="mailto:jju4768i@naver.com">jju4768i@naver.com</a></p>
-                                </div>
+                                <p>이름.</p>
+                                <p>박진현</p>
+                                <p>생년월일.</p>
+                                <p>1996.03.03.</p>
+                                <p>MBTI.</p>
+                                <p>INTP</p>
+                                <p>이메일.</p>
+                                <p><a href="mailto:jju4768i@naver.com">jju4768i@naver.com</a></p>
                             </div>
                         </div>
 
@@ -76,10 +69,10 @@ const Profile = () => {
                             </div>
 
                             <div className="inventory">
-                                <p>Adobe Photosho</p>
-                                <p> Adobe illustratar</p>
-                                <p> Adobe lnDesign</p>
-                                <p> ITQ 마스터&#40;한글&#47;엑셀&#47;파포&#41;</p>
+                                <p>• Adobe Photosho</p>
+                                <p>• Adobe illustratar</p>
+                                <p>• Adobe lnDesign</p>
+                                <p>• ITQ 마스터  </p>
                             </div>
                         </div>
 
@@ -89,7 +82,7 @@ const Profile = () => {
                             </div>
 
                             <div className="inventory">
-                                <p> AI&React 활용 스마트시티웨더 구축 <br /> &#45; 리퍼블리셔 양성과정</p>
+                                <p>• AI&React 활용 스마트시티웨더 구축 <br /> &#45; 리퍼블리셔 양성과정</p>
                             </div>
                         </div>
                     </div>
@@ -99,7 +92,6 @@ const Profile = () => {
             <div className="btn">
                 {bubble && (
                     <div className={`bubble ${bubble ? 'active' : ''}`}>
-                        <a href="#"><IoLogoGithub color='#fff' size={33} /></a>
                         <a href="#">이력서</a>
                         <a href="#">자기소개서</a>
                     </div>
