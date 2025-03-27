@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import ProjectCard from './ProjectCard';
+import { TbArrowBigRightFilled } from "react-icons/tb";
 
 const data = [
   {
@@ -14,10 +15,11 @@ const data = [
     ],
     img: './img/weather.png',
     skill: '#JSX #CSS #React #ReactRouter #TanstckQuey',
+    url:'https://domadocon.github.io/project_weather/',
   },
   {
     id: 2,
-    title: 'TodoList',
+    title: 'Todo List',
     description: [
       '• React를 활용한 컴포넌트 기반 SPA 제작',
       '• useState를 이용해 할 일 추가, 수정, 삭제 및 완료 상태 관리',
@@ -27,6 +29,7 @@ const data = [
     ],
     img: './img/todolist.png',
     skill: '#JSX #CSS #React',
+    url:'https://domadocon.github.io/project_todolist/',
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ const data = [
     ],
     img: './img/lunabrew.png',
     skill: '#HTML #CSS #JavaScript',
+    url:'https://domadocon.github.io/lunabrew_CloneCoding/',
   },
 ];
 
@@ -84,7 +88,7 @@ const Projects = () => {
 
     setTimeout(() => {
       scrolling.current = false;
-    }, 800);
+    }, 500);
   }, []);
 
   useEffect(() => {
@@ -105,7 +109,7 @@ const Projects = () => {
             <ProjectCard key={item.id} item={item} />
           ))}
         </div>
-        <div className="scroll_mouse">Scroll <br/> wheel </div>
+        <div className="scroll_mouse">scroll <br/> wheel <span><TbArrowBigRightFilled size={22}/></span> </div>
       </div>
     </div>
   );

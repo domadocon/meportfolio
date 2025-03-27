@@ -1,156 +1,64 @@
 @use '../styles.scss' as *;
 
-.skills {
+
+.skills{
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
-  padding: 50px 1rem;
+  padding: 0 1rem;
 
-  h2 {
+  h2{
     font-family: 'pretendard_b';
-    font-size: 5rem;
-    margin: 40px 0;
+    font-size: 4rem;
+    margin-bottom: 40px;
 
-    span {
+    span{
       color: $point;
     }
   }
 
-  .skills_icon {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+  .skills_icon{
+    h3{
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      margin: 30px 0;
 
-    h3 {
-      font-size: 2.5rem;
-      padding-bottom: 32px;
-      text-align: center;
+      &::after {
+        content: '';
+        flex-grow: 1;
+        height: 1px;
+        background-color: #fff;
+        margin-left: 10px;
+      }
     }
 
     .coding,
     .design,
-    .itq {
-      .icon {
+    .itq{ 
+      .icons{
         display: flex;
-        gap: 18px;
-        padding-bottom: 10px;
-      }
+        flex-wrap: wrap;
 
-
-      .text {
-        align-content: center;
-        width: 100px;
-      }
-    }
-  }
-}
-
-
-@media (max-width:$tabletsmall) {
-
-  .skills {
-    padding: 80px 1rem;
-
-    h2{
-      font-size: 4rem;
-    }
-    
-    .skills_icon {
-      grid-template-columns: repeat(1, 1fr);
-
-      h3 {
-        text-align: start;
-      }
-
-      .coding {
-        .icons {
-          .icons_i {
-
-            .coding_top,
-            .coding_btm {
-              display: grid;
-              grid-template-columns: repeat(3, 1fr);
-            }
-          }
-        }
-      }
-
-      .design,
-      .itq {
-        .icons {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-
-      .coding,
-      .design,
-      .itq {
-        margin-bottom: 40px;
-
-        .icon {
-          img {
-            width: 55px;
-          }
-        }
-
-
-      }
-    }
-  }
-}
-
-
-@media (max-width:$mobile) {
-  .skills{
-    h2{
-      font-size: 3.5rem;
-      margin: 20px 0;
-    }
-    .skills_icon{
-      h3{
-        font-size: 2rem;
-      }
-      
-      .coding,
-      .design,
-      .itq{
         .icon{
-          gap: 4px;
-        }
-
-        .text{
-          font-size: 14px;
-          width: 80px;
+          align-items: center;
+          width: 130px;
+          text-align: center;
         }
       }
     }
   }
 }
 
-@media screen and (max-width:470px) {
-  .skills{
-    h2{
-      margin: 70px 0;
-    }
-    
-    .skills_icon{
-      h3{
-        // text-align: center;
-        padding-bottom: 16px;
-      }
 
-      .coding,
-      .design,
-      .itq{
-        .icon{
-          img{
-            width: 76px;
-          }
-        }
-        .text{
-          display: none;
-        }
-      }
+@media (max-width: $laptop) {
+  .skills{
+    margin-bottom: 15.5rem;
+
+    h2{
+      margin-top: 100px;
     }
   }
 }

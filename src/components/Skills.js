@@ -9,57 +9,55 @@ const Skills = () => {
       <div className="skills_icon">
         <div className="coding">
           <h3>Coding</h3>
-
           <div className="icons">
-            <div className="icons_i">
-              <div className="coding_top">
-                <SkillsItem
-                  iconSrc="./img/html_icon.png"
-                  altText="html_icon"
-                  skillName="HTML"
-                  percentage="90%"
-                />
-                <SkillsItem
-                  iconSrc="./img/css_icon.png"
-                  altText="css_icon"
-                  skillName="CSS"
-                  percentage="80%"
-                />
-                <SkillsItem
-                  iconSrc="./img/javascript_icon.png"
-                  altText="javascript_icon"
-                  skillName="JavaScript"
-                  percentage="60%"
-                />
-              </div>
+            <SkillsItem
+              iconSrc="./img/html_icon.png"
+              altText="html_icon"
+              skillName="HTML"
+              percentage="90%"
+            />
+            <SkillsItem
+              iconSrc="./img/css_icon.png"
+              altText="css_icon"
+              skillName="CSS"
+              percentage="80%"
+            />
+            <SkillsItem
+              iconSrc="./img/javascript_icon.png"
+              altText="javascript_icon"
+              skillName="JavaScript"
+              percentage="60%"
+            />
 
-              <div className="coding_btm">
-                <SkillsItem
-                  iconSrc="./img/react_icon.png"
-                  altText="react_icon"
-                  skillName="React"
-                  percentage="60%"
-                />
-                <SkillsItem
-                  iconSrc="./img/redux_icon.png"
-                  altText="redux_icon"
-                  skillName="Redux"
-                  percentage="50%"
-                />
-                <SkillsItem
-                  iconSrc="./img/tanstckquey_icon.png"
-                  altText="tanstckquey_icon"
-                  skillName="TanstckQuey"
-                  percentage="50%"
-                />
-              </div>
-            </div>
+            <SkillsItem
+              iconSrc="./img/react_icon.png"
+              altText="react_icon"
+              skillName="React"
+              percentage="60%"
+            />
+            <SkillsItem
+              iconSrc="./img/scss_icon.png"
+              altText="scss_icon"
+              skillName="SCSS"
+              percentage="80%"
+            />
+            <SkillsItem
+              iconSrc="./img/redux_icon.png"
+              altText="redux_icon"
+              skillName="Redux"
+              percentage="50%"
+            />
+            <SkillsItem
+              iconSrc="./img/tanstckquey_icon.png"
+              altText="tanstckquey_icon"
+              skillName="TanstckQuey"
+              percentage="50%"
+            />
           </div>
         </div>
 
         <div className="design">
           <h3>Design</h3>
-
           <div className="icons">
             <SkillsItem
               iconSrc="./img/photoshop_icon.png"
@@ -78,6 +76,12 @@ const Skills = () => {
               altText="inDesign_icon"
               skillName="inDesign"
               percentage="50%"
+            />
+            <SkillsItem
+              iconSrc="./img/figma_icon.png"
+              altText="figma_icon"
+              skillName="Figma"
+              percentage="60%"
             />
           </div>
 

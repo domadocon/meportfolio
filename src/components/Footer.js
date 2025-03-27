@@ -3,6 +3,8 @@ import { HiOutlineMail } from "react-icons/hi";
 import { IoLogoGithub } from "react-icons/io";
 
 const footer = () => {
+
+
   return (
     <footer className='section'>
       <h2>
@@ -16,7 +18,7 @@ const footer = () => {
       <div className="info">
         <div className='contact'>
           <a href="mailto:jju4768i@naver.com"><HiOutlineMail size={40} /></a>
-          <a href="#"><IoLogoGithub size={40} /></a>
+          <a href="https://github.com/domadocon" target="_blank" rel="noopener noreferrer"><IoLogoGithub size={40} /></a>
         </div>
 
         <div className='info_text'>

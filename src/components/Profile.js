@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import { IoPerson } from "react-icons/io5";
-import { PiCertificateFill } from "react-icons/pi";
-import { GiBookCover } from "react-icons/gi";
 
 const Profile = () => {
 
@@ -13,12 +10,16 @@ const Profile = () => {
         setBubble(!bubble);
     };
 
+    const home = () => {
+        window.location.href = "/";
+      };
+
 
 
     return (
         <div className='section'>
             <div className="header">
-                <h1><a href="#"><img src="./img/logo.png" alt="logo" /></a></h1>
+                <h1 onClick={home} style={{ cursor: "pointer" }}> <img src="./img/logo.png" alt="logo" /></h1>
 
                 <div>
                     <ul>
@@ -48,7 +49,7 @@ const Profile = () => {
                     <div className="human">
                         <div className="detail">
                             <div className="s_title">
-                                <h3><span><IoPerson /></span>ABOUT ME</h3>
+                                <h3>ABOUT ME</h3>
                             </div>
                             <div className="texts">
                                 <p>이름.</p>
@@ -65,7 +66,7 @@ const Profile = () => {
 
                         <div className="certificate">
                             <div className="s_title">
-                                <h3><span><PiCertificateFill /></span>CERTIFICATE</h3>
+                                <h3>CERTIFICATE</h3>
                             </div>
 
                             <div className="inventory">
@@ -78,7 +79,7 @@ const Profile = () => {
 
                         <div className="education">
                             <div className="s_title">
-                                <h3><span><GiBookCover /></span>EDUCATIONAL</h3>
+                                <h3>EDUCATIONAL</h3>
                             </div>
 
                             <div className="inventory">
@@ -106,7 +107,7 @@ const Profile = () => {
                     </div>
                 </button>
             </div>
-        </div>
+        </div >
     )
 }
 

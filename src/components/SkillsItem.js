@@ -9,7 +9,7 @@ const SkillItem = ({ iconSrc, altText, skillName, percentage }) => {
       
       <div className="text">
         <p>{skillName}</p>
-        <span>{percentage}</span>
+        {/* <span>{percentage}</span> */}
       </div>
     </div>
   );

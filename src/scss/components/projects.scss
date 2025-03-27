@@ -60,20 +60,23 @@
         }
         
         .c_but{          
+          width: 100%;
+          display: none;
+
           button {
             background-color: $point;
             color: #fff;
             border: none;
             border-radius: 5px;
-            width: 140px;
-            height: 48px;
+            width: 150px;
+            height: 55px;
             cursor: pointer;
-            margin-bottom: 100px;
             font-size: 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px 25px;
+            font-family: "pretendard_r";
           }
         }
 
@@ -84,7 +87,7 @@
 
           p {
             align-self: center;
-            color: #5a5a5a;
+            color: #6d6d6d;
           }
 
           a {
@@ -182,7 +185,7 @@
             font-family: 'pretendard_b';
             font-size: 3.5rem;
             color: #000;
-            top: 10px;
+            top: 20px;
             left: 5%;
 
             span {
@@ -198,18 +201,16 @@
 
       .scroll_mouse {
         position: absolute;
-        top: 20px;
+        top: 40px;
         right: 10px;
-        font-size: 18px;
+        font-size: 16px;
         color: $point;
         display: flex;
         gap: 14px;
         align-items: center;
         text-align: center;
-
-        &::after {
-          content: '➡';
-          font-size: 32px;
+        
+        span{
           animation: sideMove 1.2s infinite ease-in-out;
         }
 
@@ -258,21 +259,20 @@
 
         .card {
           flex: 0 0 auto;
-          height: 660px;
-          margin-bottom: 40px;
+          height: 700px;
+          margin-bottom: 100px;
           background-color: #fffffff1;
           border-radius: 20px;
-          padding: 0 10px;
+          padding-top: 2rem;
 
           .card_i {
             .description {
               margin-top: 20px;
-              padding-left: 0;
             }
 
             h3 {
               padding-top: 24px;
-              padding-bottom: 10px;
+              padding-bottom: 24px;
               font-size: 2rem;
             }
           }
@@ -294,15 +294,30 @@
             position: relative;
 
             p {
-              font-size: 14px;
+              font-size: 13px;
             }
 
-            a {}
+            a {
+              display: none;
+            }
           }
 
           .description {
             p {
               font-size: 14px;
+            }
+          }
+
+          .c_but{
+            display: block;
+            padding: 32px 0;
+            display: flex;
+            justify-content: center;
+
+            button{
+              svg{
+                animation: sideMove 1.2s infinite ease-in-out;
+              }
             }
           }
         }
@@ -325,6 +340,12 @@
             justify-content: center;
           }
 
+          .description{
+            p{
+              font-size: 13px
+            }
+          }
+
           .card_i {
             h3 {
               font-size: 1.3rem;
@@ -334,4 +355,22 @@
       }
     }
   }
+}
+
+@media screen and (max-width:490px) {
+  .projects{
+    .right{
+      .scroll{
+        .card{
+          .card_i{
+            .description{
+              padding: 0 15px;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }

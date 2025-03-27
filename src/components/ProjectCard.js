@@ -17,12 +17,14 @@ const ProjectCard = ({ item }) => {
 
         <div className='card_i'>
           <h3>{item.title}</h3>
-          <a href="#">
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
             <img src={item.img} alt={item.title} />
           </a>
           <div className="skill">
             <p>{item.skill}</p>
-            <a href="#"> 사이트이동 <FiArrowUpRight size={38} /> </a>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              사이트이동 <FiArrowUpRight size={38} />
+            </a>
           </div>
           <div className="description">
             {item.description.map((desc, index) => (
@@ -31,7 +33,9 @@ const ProjectCard = ({ item }) => {
           </div>
         </div>
         <div className="c_but">
-          <button type="button">사이트이동<TbArrowBigRightFilled size={22} /></button>
+          <button type="button" onClick={() => window.open(item.url, "_blank")}>
+            사이트이동<TbArrowBigRightFilled size={22} />
+          </button>
         </div>
       </div>
     </>
